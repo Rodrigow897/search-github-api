@@ -154,8 +154,10 @@ section {
   justify-self: center;
   height: 90%;
   max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden; 
+  overflow-y: auto; /*assim eu consigo scrolar no eixo y*/
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
   padding-right: 5px;
   width: 90%;
   border: 1.5px solid #ccc;
@@ -163,7 +165,6 @@ section {
   box-shadow: 0 1px 3px rgba(0,0,0,0.8);
   margin-bottom: 25px;
 }
-
 
 
 #divider2{
