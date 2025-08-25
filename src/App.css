@@ -60,6 +60,12 @@ section {
   padding-right: 8px;
 }
 
+#text-repositories,#amount-repositories{
+  color: #000000;
+  font-size: 25px;
+  font-weight: 400;
+}
+
 
 #area {
   display: flex;
@@ -142,7 +148,7 @@ section {
   width: 90%;
 }
 
-#repositories{
+#repositories-field{
   margin-top: 20px;
   justify-self: center;
   height: 90%;
@@ -159,4 +165,10 @@ section {
   background-color: #ccc;
   margin: 5px auto 15px auto;
   width: 99%;
+  margin-top: 20px;
+}
+
+#repositories-info{
+  margin: 15px 0 0 20px;
+  width: 90%;
 }
