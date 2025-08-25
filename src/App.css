@@ -50,7 +50,8 @@ section {
   justify-content: center;
   align-items: center;
   justify-self: center;
-  margin-top: 5px; 
+  margin-top: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 #icon-cat {
@@ -108,7 +109,6 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  outline: none;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
@@ -121,6 +121,7 @@ section {
 #img-profile{
   height: 118px;
   width: 118px;
+  padding-top: 10px;
 }
 
 #text-profile{
@@ -138,4 +139,8 @@ section {
 #amount-repositories{
   justify-self: start;
   width: 90%;
+}
+
+#repositories{
+  margin-top: 20px;
 }
