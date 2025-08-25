@@ -1,0 +1,14 @@
+export default function Repositories(props) {
+    return(
+        <div className='repositores-box'>
+            <div id='repositories'>
+                <div id='repositories-info' >
+                    <h2 className="title" >{props.title}</h2>
+                    <p className="description">{props.description}</p>
+                    <p className="last-update">{props.lastUpdate}</p>
+                </div>
+                <div id='divider2'></div>
+            </div>
+        </div>
+    )
+}

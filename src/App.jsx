@@ -1,6 +1,7 @@
 import logCat from './assets/logo-cat.svg'
 import profileSvg from './assets/profile.svg' 
 import searchIcon from './assets/search-icon.svg'
+import Repositories from './components/RepositoriesBox'
 import './App.css'
 
 function App() {
@@ -40,16 +41,30 @@ function App() {
                   <h1 id='amount-repositories' >25 repositories</h1>
 
                 <div id='repositories-field'>
+                  
+                    <Repositories
+                      title = "Spoon-knife"
+                      description = "This repo is for demonstration purposes"
+                      lastUpdate = "Updated 5 days ago"
+                    />
 
-                    <div id='repositories'>
-                      <div id='repositories-info' >
-                        <h2>Spoon-Knife</h2>
-                        <p>This repo is for demonstration purposes </p>
-                        <p>Updated 5 days ago</p>
-                      </div>
-                      <div id='divider2'></div>
-                    </div>
+                    <Repositories
+                      title = "Spoon-knife"
+                      description = "This repo is for demonstration purposes"
+                      lastUpdate = "Updated 5 days ago"
+                    />
 
+                    <Repositories
+                      title = "Spoon-knife"
+                      description = "This repo is for demonstration purposes"
+                      lastUpdate = "Updated 5 days ago"
+                    />
+
+                    <Repositories
+                      title = "Spoon-knife"
+                      description = "This repo is for demonstration purposes"
+                      lastUpdate = "Updated 5 days ago"
+                    />
 
                 </div>
 

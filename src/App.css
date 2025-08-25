@@ -15,6 +15,7 @@
   width: 100vw;
   height: 100vh;
   align-items: center;
+  background-color: #EDE9E99C;
 }
 
 
@@ -45,13 +46,13 @@ section {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 1.5px solid #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: center;
   margin-top: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 }
 
 #icon-cat {
@@ -152,12 +153,18 @@ section {
   margin-top: 20px;
   justify-self: center;
   height: 90%;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden; 
+  padding-right: 5px;
   width: 90%;
   border: 1.5px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.8);
   margin-bottom: 25px;
 }
+
+
 
 #divider2{
   border: none;
