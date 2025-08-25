@@ -82,7 +82,7 @@ section {
   border: 1px solid #ccc;
   font-size: 16px;
   outline: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 #search-icon {
@@ -102,27 +102,28 @@ section {
 
 #card{
   width: 90%;
-  border: red 1px solid;
   margin-top: 25px;
+  border: 1px solid #ccc;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 #profile{
   display: flex;
-  border: 1px solid red;
-  width: 100%;
+  width: 90%;
   align-items: center;
 }
 
 #img-profile{
   height: 118px;
   width: 118px;
-  margin-left: 20px;
 }
 
 #text-profile{
-  margin-left: 20px;
+  margin-left: 25px;
 }
