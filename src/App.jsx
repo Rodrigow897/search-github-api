@@ -26,6 +26,7 @@ function App() {
               </div>
 
               <div id='card'>
+
                 <div id='profile' >
                   <img id='img-profile' src={profileSvg} alt="profile picture" />
                   <div id='text-profile' >
@@ -33,6 +34,10 @@ function App() {
                     <p>joined 25 jan 2011</p>
                   </div>
                 </div>
+
+                  <h1 id='text-repositories' >repositories</h1>
+                  <hr class="divider" />
+
               </div>
 
             </div>
