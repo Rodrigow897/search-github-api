@@ -126,6 +126,18 @@ section {
   align-items: center;
 }
 
+#profile-name{
+  color: #000000;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.title-repo{
+  color: #000000;
+  font-weight: 400;
+  font-size: 25px;
+}
+
 #img-profile{
   height: 118px;
   width: 118px;

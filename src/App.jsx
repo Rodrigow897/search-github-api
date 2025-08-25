@@ -31,7 +31,7 @@ function App() {
                 <div id='profile' >
                   <img id='img-profile' src={profileSvg} alt="profile picture" />
                   <div id='text-profile' >
-                    <h1>octocat</h1>
+                    <h1 id='profile-name'>octocat</h1>
                     <p>joined 25 jan 2011</p>
                   </div>
                 </div>
@@ -49,9 +49,9 @@ function App() {
                     />
 
                     <Repositories
-                      title = "Spoon-knife"
-                      description = "This repo is for demonstration purposes"
-                      lastUpdate = "Updated 5 days ago"
+                      title = "Hello-Word"
+                      description = "This is my first repo"
+                      lastUpdate = "Updated 20 days ago"
                     />
 
                     <Repositories

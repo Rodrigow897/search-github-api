@@ -3,7 +3,7 @@ export default function Repositories(props) {
         <div className='repositores-box'>
             <div id='repositories'>
                 <div id='repositories-info' >
-                    <h2 className="title" >{props.title}</h2>
+                    <h2 className="title-repo" >{props.title}</h2>
                     <p className="description">{props.description}</p>
                     <p className="last-update">{props.lastUpdate}</p>
                 </div>
