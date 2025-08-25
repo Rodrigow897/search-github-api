@@ -63,7 +63,7 @@ section {
 
 #area {
   display: flex;
-  justify-content: center;
+  height: 670px;
   flex-direction: column;
   align-items: center;
 }
@@ -81,7 +81,7 @@ section {
   border: 1px solid #ccc;
   font-size: 16px;
   outline: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 }
 
 #search-icon {
@@ -101,6 +101,7 @@ section {
 
 #card{
   width: 90%;
+  height: 85%;
   margin-top: 25px;
   border: 1px solid #ccc;
   background-color: white;
@@ -109,7 +110,7 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
 }
 
 #profile{
@@ -143,4 +144,19 @@ section {
 
 #repositories{
   margin-top: 20px;
+  justify-self: center;
+  height: 90%;
+  width: 90%;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  margin-bottom: 25px;
+}
+
+#divider2{
+  border: none;
+  height: 1.5px;
+  background-color: #ccc;
+  margin: 5px auto 15px auto;
+  width: 99%;
 }
