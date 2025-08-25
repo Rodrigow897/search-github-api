@@ -37,6 +37,9 @@ function App() {
 
                   <h1 id='text-repositories' >repositories</h1>
                   <hr class="divider" />
+                  <h1 id='amount-repositories' >25 repositories</h1>
+
+
 
               </div>
 

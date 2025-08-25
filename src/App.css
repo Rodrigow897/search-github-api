@@ -132,5 +132,10 @@ section {
   height: 1.5px;
   background-color: #ccc;
   margin: 5px auto 15px auto;
-  width: 95%;
+  width: 90%;
+}
+
+#amount-repositories{
+  justify-self: start;
+  width: 90%;
 }
