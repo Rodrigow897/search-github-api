@@ -31,6 +31,7 @@ section {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   margin-bottom: 20px;
+  width: 90%;
 }
 
 #title {
@@ -39,6 +40,8 @@ section {
   justify-self: start;
   margin-left: 34px;
   color: black;
+  margin-left: 80px;
+  margin-top: 25px;
 }
 
 #logo-cat {
