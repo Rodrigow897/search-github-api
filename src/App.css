@@ -15,14 +15,14 @@
   width: 100vw;
   height: 100vh;
   align-items: center;
-  background-color: #EDE9E99C;
+  background-color: #FAF9F6;
 }
 
 
 section {
   width: 80%;
   height: 80%;
-  background-color: #EDE9E99C;
+  background-color: #FAF9F6;
 }
 
 
@@ -42,7 +42,7 @@ section {
 }
 
 #logo-cat {
-  background-color: white;
+  background-color: #D6EAF8;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -52,7 +52,7 @@ section {
   align-items: center;
   justify-self: center;
   margin-top: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 #icon-cat {
@@ -62,7 +62,7 @@ section {
 }
 
 #text-repositories,#amount-repositories{
-  color: #000000;
+  color: #423b3b;
   font-size: 25px;
   font-weight: 400;
 }
@@ -88,7 +88,14 @@ section {
   border: 1px solid #ccc;
   font-size: 16px;
   outline: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  background-color: #D6EAF8;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#input:hover {
+  box-shadow: 0 6px 14px rgba(41, 128, 185, 0.25); /* azul suave no hover */
+  transform: translateY(-2px);
 }
 
 #search-icon {
@@ -107,17 +114,17 @@ section {
 }
 
 #card{
+  background-color: #D6EAF8;
   width: 90%;
   height: 85%;
   margin-top: 25px;
   border: 1px solid #ccc;
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 #profile{
@@ -127,13 +134,13 @@ section {
 }
 
 #profile-name{
-  color: #000000;
+  color: #423b3b;
   font-weight: 400;
   font-size: 40px;
 }
 
 .title-repo{
-  color: #000000;
+  color: #423b3b;
   font-weight: 400;
   font-size: 25px;
 }
@@ -174,8 +181,15 @@ section {
   width: 90%;
   border: 1.5px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   margin-bottom: 25px;
+  background-color: white;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#repositories-field:hover {
+  box-shadow: 0 6px 14px rgba(41, 128, 185, 0.25); /* azul suave no hover */
+  transform: translateY(-2px);
 }
 
 
@@ -191,4 +205,8 @@ section {
 #repositories-info{
   margin: 15px 0 0 20px;
   width: 90%;
+}
+
+.title-repo{
+  color: #423b3b;
 }
