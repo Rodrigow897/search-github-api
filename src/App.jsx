@@ -12,7 +12,6 @@ function App() {
           <section>
 
             <div id='top'>
-              <h1 id='title'>Search</h1>
               <div id='logo-cat'>
                 <img id='icon-cat' src={logCat} alt="" />
               </div>
