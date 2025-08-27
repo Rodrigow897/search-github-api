@@ -35,6 +35,11 @@ section {
   margin-left: 40px;
 }
 
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
 #logo-cat {
   background-color: #c9c4c4;
   width: 60px;
