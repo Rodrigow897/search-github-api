@@ -84,7 +84,7 @@ body{
   height: 40px;
   padding: 0 15px;
   border-radius: 8px;
-  border: 1px solid #FF7A29;
+  border: 1px solid #888;
   font-size: 16px;
   outline: none;
   background-color: #2B2B2B;
@@ -92,7 +92,8 @@ body{
 }
 
 #input:hover {
-  box-shadow: 0 3px 6px rgba(255, 122, 41, 0.6); /* azul suave no hover */
+  box-shadow: -5px -5px 23px #eb00ff,
+  5px 5px 23px #00f0ff;
   transform: translateY(-2px);
 }
 
@@ -116,19 +117,19 @@ body{
   width: 90%;
   height: 85%;
   margin-top: 25px;
-  border: 1px solid #FF7A29;
+  border: 1px solid #888;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 #card:hover{
-  box-shadow: 0 3px 6px rgba(255, 122, 41, 0.6);
+  box-shadow: -5px -5px 23px #eb00ff,
+  5px 5px 23px #00f0ff;
   transform: translateY(-2px);
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 #profile{
