@@ -12,9 +12,11 @@ function App() {
           <section>
 
             <div id='top'>
+              <a href="https://github.com/">
               <div id='logo-cat'>
                 <img id='icon-cat' src={logCat} alt="" />
               </div>
+              </a>
             </div>
 
             <div id="area">
