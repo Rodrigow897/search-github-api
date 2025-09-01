@@ -6,14 +6,21 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const { repositories, setRepositories } = useState([])
+  const [ repositories, setRepositories] = useState([])
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
-    fetch('https://api.github.com/search/users?q=rodrigow897')
+    // Buscar dados do usuário
+    fetch('https://api.github.com/users/octocat')
+    .then(res => res.json())
+    .then(data => setRepositories(data))
+
+    //Buscar repositórios do usuário
+    fetch('https://api.github.com/users/octocat/repos')
     .then(res => res.json())
     .then(data => setRepositories(data))
   }, [])
-
+  
   return (
     <>
         <div className="container">
