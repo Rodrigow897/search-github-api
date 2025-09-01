@@ -2,9 +2,17 @@ import logCat from './assets/logo-cat.svg'
 import profileSvg from './assets/profile.svg' 
 import searchIcon from './assets/search-icon.svg'
 import Repositories from './components/RepositoriesBox'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
+  const { repositories, setRepositories } = useState([])
+
+  useEffect(() => {
+    fetch('https://api.github.com/search/users?q=rodrigow897')
+    .then(res => res.json())
+    .then(data => setRepositories(data))
+  }, [])
 
   return (
     <>
