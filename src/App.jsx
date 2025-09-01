@@ -1,98 +1,121 @@
 import logCat from './assets/logo-cat.svg'
-import profileSvg from './assets/profile.svg' 
 import searchIcon from './assets/search-icon.svg'
 import Repositories from './components/RepositoriesBox'
 import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [ repositories, setRepositories] = useState([])
+  const [repositories, setRepositories] = useState([])
   const [user, setUser] = useState(null)
+  const [search, setSearch] = useState("octocat") // initial value
 
+  const fetchUserData = (username) => {
+    if (!username) return
+
+    // Search for user
+    fetch(`https://api.github.com/users/${username}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.message === "Not Found") {
+          setUser(null)
+          setRepositories([])
+        } else {
+          setUser(data)
+        }
+      })
+
+    // Search for repositories
+    fetch(`https://api.github.com/users/${username}/repos`)
+      .then(res => res.json())
+      .then(data => {
+        if (!data.message) {
+          setRepositories(data)
+        } else {
+          setRepositories([])
+        }
+      })
+  }
+
+  // initial (octocat)
   useEffect(() => {
-    // Buscar dados do usuário
-    fetch('https://api.github.com/users/octocat')
-    .then(res => res.json())
-    .then(data => setRepositories(data))
-
-    //Buscar repositórios do usuário
-    fetch('https://api.github.com/users/octocat/repos')
-    .then(res => res.json())
-    .then(data => setRepositories(data))
+    fetchUserData("octocat")
   }, [])
-  
+
   return (
     <>
-        <div className="container">
-          <section>
+      <div className="container">
+        <section>
 
-            <div id='top'>
-              <a href="https://github.com/">
+          <div id='top'>
+            <a href="https://github.com/">
               <div id='logo-cat'>
-                <img id='icon-cat' src={logCat} alt="" />
+                <img id='icon-cat' src={logCat} alt="GitHub logo" />
               </div>
-              </a>
+            </a>
+          </div>
+
+          <div id="area">
+            <div className="input-box">
+              <input
+                id='input'
+                type="text"
+                placeholder='Digite um usuário'
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <span
+                id="search-icon"
+                onClick={() => fetchUserData(search)} // search here
+                style={{ cursor: "pointer" }}
+              >
+                <img src={searchIcon} alt="search" />
+              </span>
             </div>
 
-            <div id="area">
-              <div className="input-box">
-                <input id='input' type="text" placeholder='Type here' />
-                  <span id="search-icon">
-                    <img src={searchIcon} alt="search" />
-                </span>
+            <div id='card'>
+
+              {/* User profile */}
+              <div id='profile'>
+                {user ? (
+                  <>
+                    <img id='img-profile' src={user.avatar_url} alt="profile picture" />
+                    <div id='text-profile'>
+                      <h1 id='profile-name'>{user.name || user.login}</h1>
+                      <p>Joined {new Date(user.created_at).toDateString()}</p>
+                    </div>
+                  </>
+                ) : (
+                  <p id="userNotFound">User Not Found... 😕</p>
+                )}
               </div>
 
-              <div id='card'>
+              {/* Repositories */}
+              {user && (
+                <>
+                  <h1 id='text-repositories'>Repositories</h1>
+                  <hr className="divider" />
+                  <h1 id='amount-repositories'>{repositories.length} repositories</h1>
 
-                <div id='profile' >
-                  <img id='img-profile' src={profileSvg} alt="profile picture" />
-                  <div id='text-profile' >
-                    <h1 id='profile-name'>octocat</h1>
-                    <p>joined 25 jan 2011</p>
+                  <div id='repositories-field'>
+                    {repositories.map(repo => (
+                      <Repositories
+                        key={repo.id}
+                        title={repo.name}
+                        description={repo.description || "No description"}
+                        lastUpdate={`Updated ${new Date(repo.updated_at).toDateString()}`}
+                      />
+                    ))}
                   </div>
-                </div>
-
-                  <h1 id='text-repositories' >repositories</h1>
-                  <hr class="divider" />
-                  <h1 id='amount-repositories' >25 repositories</h1>
-
-                <div id='repositories-field'>
-                  
-                    <Repositories
-                      title = "Spoon-knife"
-                      description = "This repo is for demonstration purposes"
-                      lastUpdate = "Updated 5 days ago"
-                    />
-
-                    <Repositories
-                      title = "Hello-Word"
-                      description = "This is my first repo"
-                      lastUpdate = "Updated 20 days ago"
-                    />
-
-                    <Repositories
-                      title = "Spoon-knife"
-                      description = "This repo is for demonstration purposes"
-                      lastUpdate = "Updated 5 days ago"
-                    />
-
-                    <Repositories
-                      title = "Spoon-knife"
-                      description = "This repo is for demonstration purposes"
-                      lastUpdate = "Updated 5 days ago"
-                    />
-
-                </div>
-
-              </div>
+                </>
+              )}
 
             </div>
+          </div>
 
-          </section>
-        </div>
+        </section>
+      </div>
     </>
   )
 }
 
 export default App
-                                

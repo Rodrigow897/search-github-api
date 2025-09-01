@@ -156,9 +156,12 @@ section {
 }
 
 #img-profile{
-  height: 118px;
-  width: 118px;
-  padding-top: 10px;
+  height: 125px;
+  width: 125px;
+  margin-top: 15px;
+  border-radius: 50%;
+  border: 2px solid #888;
+  box-shadow: 2px 2px 5px #888;
 }
 
 #text-profile{
@@ -218,4 +221,11 @@ section {
 
 #description-repo,#last-update{
   color: black;
+}
+
+#userNotFound{
+  font-size: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
